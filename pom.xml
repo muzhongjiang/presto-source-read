@@ -94,9 +94,9 @@
         <module>presto-record-decoder</module>
         <module>presto-kafka</module>
         <module>presto-redis</module>
-        <module>presto-accumulo</module>
-        <module>presto-cassandra</module>
-        <module>presto-bigquery</module>
+<!--        <module>presto-accumulo</module>-->
+<!--        <module>presto-cassandra</module>-->
+<!--        <module>presto-bigquery</module>-->
         <module>presto-blackhole</module>
         <module>presto-memory</module>
         <module>presto-orc</module>
@@ -116,12 +116,14 @@
         <module>presto-raptor</module>
         <module>presto-base-jdbc</module>
         <module>presto-testing-docker</module>
+
         <module>presto-mysql</module>
-        <module>presto-oracle</module>
         <module>presto-postgresql</module>
+<!--        <module>presto-oracle</module>-->
+<!--        <module>presto-sqlserver</module>-->
+<!--        <module>presto-redshift</module>-->
+
         <module>presto-prometheus</module>
-        <module>presto-redshift</module>
-        <module>presto-sqlserver</module>
         <module>presto-mongodb</module>
         <module>presto-bytecode</module>
         <module>presto-client</module>
@@ -154,19 +156,19 @@
         <module>presto-matching</module>
         <module>presto-memory-context</module>
         <module>presto-proxy</module>
-        <module>presto-kudu</module>
+<!--        <module>presto-kudu</module>-->
         <module>presto-elasticsearch</module>
         <module>presto-function-namespace-managers</module>
         <module>presto-expressions</module>
         <module>presto-benchmark-runner</module>
-        <module>presto-spark-classloader-interface</module>
-        <module>presto-spark-base</module>
-        <module>presto-spark-common</module>
-        <module>presto-spark</module>
-        <module>presto-spark-package</module>
-        <module>presto-spark-launcher</module>
-        <module>presto-spark-testing</module>
-        <module>presto-druid</module>
+<!--        <module>presto-spark-classloader-interface</module>-->
+<!--        <module>presto-spark-base</module>-->
+<!--        <module>presto-spark-common</module>-->
+<!--        <module>presto-spark</module>-->
+<!--        <module>presto-spark-package</module>-->
+<!--        <module>presto-spark-launcher</module>-->
+<!--        <module>presto-spark-testing</module>-->
+<!--        <module>presto-druid</module>-->
         <module>presto-common</module>
         <module>presto-thrift-testing-udf-server</module>
         <module>presto-thrift-spec</module>

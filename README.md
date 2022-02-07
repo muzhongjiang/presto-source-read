@@ -25,6 +25,7 @@ Presto is a standard Maven project. Simply run the following command from the pr
 
 ```shell
  ./mvnw clean install -DskipTests
+ ./mvnw clean install -DskipTests   -T 8 -b smart
 ```
 
 ## Running Presto in your IDE
