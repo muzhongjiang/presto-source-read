@@ -2,14 +2,14 @@
 *.ipr
 *.iws
 target/
-/var
-/*/var/
-/presto-product-tests/**/var/
+/**/var/
+**/trino-product-tests/**/var/
 pom.xml.versionsBackup
 test-output/
 test-reports/
 /atlassian-ide-plugin.xml
 .idea
+.run
 .DS_Store
 .classpath
 .settings
@@ -23,6 +23,6 @@ benchmark_outputs
 *.class
 .checkstyle
 .mvn/timing.properties
-.editorconfig
 node_modules
-presto-docs-venv/
+product-test-reports
+.vscode/
