@@ -1,10 +1,6 @@
 # Development
 
-Developers should read [the development section of the website](https://trino.io/development),
-which covers thing like development philosophy and contribution process.
-
-More information about the writing and building the documentation can
-be found in the [docs module](../docs).
+[开发手册](https://trino.io/development),
 
 * [Commits and pull requests](#commits-and-pull-requests)
 * [Code style](#code-style)
