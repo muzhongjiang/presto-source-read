@@ -35,7 +35,9 @@ import java.util.regex.Pattern;
 import static com.google.common.base.Strings.nullToEmpty;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
 import static java.lang.String.format;
-
+/**
+ *
+ */
 public final class ReservedIdentifiers
 {
     private static final Pattern IDENTIFIER = Pattern.compile("'([A-Z_]+)'");

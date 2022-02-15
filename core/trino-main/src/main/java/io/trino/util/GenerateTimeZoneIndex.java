@@ -27,7 +27,9 @@ import static com.google.common.collect.Sets.intersection;
 import static io.trino.spi.type.TimeZoneKey.isUtcZoneId;
 import static java.lang.Math.abs;
 import static java.lang.String.format;
-
+/**
+ * 生成时区索引
+ */
 public final class GenerateTimeZoneIndex
 {
     private GenerateTimeZoneIndex() {}

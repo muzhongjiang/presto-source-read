@@ -61,6 +61,10 @@ import static java.util.Objects.requireNonNull;
 // The assures that only one thread will be working with the operators at a
 // time and state changer threads are not blocked.
 //
+/**
+ *  task包含N个并行驱动程序。驱动程序对数据进行操作并组合operator以产生输出，然后由任务聚合，然后交付给另一个stage的另一个task。
+ *  驱动程序是一系列operator实例，或者您可以将驱动程序视为内存中的一组物理operator。 它是 Trino 架构中最低级别的并行性。驱动器具有1个输入和1个输出。
+ */
 public class Driver
         implements Closeable
 {

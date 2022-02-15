@@ -32,7 +32,12 @@ import static com.google.common.base.MoreObjects.toStringHelper;
 import static io.trino.execution.TaskStatus.initialTaskStatus;
 import static io.trino.execution.buffer.BufferState.OPEN;
 import static java.util.Objects.requireNonNull;
-
+/**
+ * stage对分布式查询计划的特定部分进行建模，但stage 本身并不在worker 上执行。
+ * 要了解一个stage是如何执行的，您需要了解一个stage是作为分布在 worker上的一系列task实现的。
+ * task是 Trino 架构中的“工作马”，因为分布式查询计划被解构为一系列stage，然后将其转换为task，然后对split进行操作或处理。
+ * Trino 任务有输入和输出，就像一个阶段可以由一系列任务并行执行一样，一个任务与一系列驱动程序并行执行。
+ */
 @Immutable
 public class TaskInfo
 {

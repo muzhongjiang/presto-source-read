@@ -30,7 +30,12 @@ import java.util.Optional;
 
 import static com.google.common.base.MoreObjects.toStringHelper;
 import static java.util.Objects.requireNonNull;
-
+/**
+ * 当 Trino 执行Query时，它通过将执行分解为Stage层次结构来实现。
+ * 例如，如果 Trino 需要聚合存储在 Hive 中的 10 亿行的数据，它会通过创建一个根Stage来聚合其他几个Stage的输出，所有这些Stage都旨在实现分布式查询计划的不同部分。
+ * 包含Query的Stage层次结构类似于树。每个查询都有一个根Stage，负责聚合其他Stage的输出。
+ * Stage是Coordinator用来建模分布式查询计划的，但Stage本身并不在Worker上运行。
+ */
 @Immutable
 public class StageInfo
 {

@@ -32,6 +32,9 @@ import static java.lang.Boolean.TRUE;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.openjdk.jmh.annotations.Level.Iteration;
 
+/**
+ * 基准测试
+ */
 @State(Scope.Thread)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Fork(3)

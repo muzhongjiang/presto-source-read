@@ -60,7 +60,11 @@ import static java.util.logging.Level.FINE;
 import static org.jline.utils.AttributedStyle.CYAN;
 import static org.jline.utils.AttributedStyle.DEFAULT;
 import static org.jline.utils.AttributedStyle.RED;
-
+/**
+ * 解析语句（statement）时，它会将其转换为Query并创建分布式查询计划，然后将其实现为在 Worker上运行的一系列相互关联的阶段。当您在 Trino 中检索有关Query的信息时，您会收到与生成响应语句的结果集有关的每个组件的快照。
+ * Statement和Query之间的区别很简单。一个语句可以被认为是传递给 Trino 的 SQL 文本，而Query是指为执行该语句而实例化的配置和组件。
+ * Query包含：Stage、Task、Split、Connector、DataSource 。
+ */
 public class Query
         implements Closeable
 {

@@ -19,7 +19,9 @@ import com.google.common.primitives.Ints;
 import static com.google.common.base.MoreObjects.firstNonNull;
 import static com.google.common.base.Strings.nullToEmpty;
 import static java.lang.String.format;
-
+/**
+ *
+ */
 public final class TrinoServer
 {
     private TrinoServer() {}

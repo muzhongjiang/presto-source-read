@@ -32,7 +32,9 @@ import static com.google.common.base.MoreObjects.firstNonNull;
 import static com.google.common.base.StandardSystemProperty.USER_HOME;
 import static com.google.common.base.Strings.emptyToNull;
 import static java.lang.System.getenv;
-
+/**
+ * client 入口
+ */
 public final class Trino
 {
     private Trino() {}

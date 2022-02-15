@@ -68,6 +68,16 @@ IntelliJ, using `$MODULE_DIR$` accomplishes this automatically.
 执行一个查询：
    ` SELECT * FROM system.runtime.nodes;`
 
-Run a query against the TPCH connector:
 
-    SELECT * FROM tpch.tiny.region;
+### 查询mysql  
+1、配置catalog：
+```properties
+connector.name=mysql
+connection-url=jdbc:mysql://tencent:3306
+connection-user=root
+connection-password=root&password@168
+```
+2、执行 `SHOW TABLES FROM mysql.test;`
+
+
+

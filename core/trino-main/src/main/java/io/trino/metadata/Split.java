@@ -25,7 +25,10 @@ import java.util.List;
 
 import static com.google.common.base.MoreObjects.toStringHelper;
 import static java.util.Objects.requireNonNull;
-
+/**
+ * task对split进行操作，split是较大数据集的部分。分布式查询计划的最低级别的stage通过连接器的split检索数据，分布式查询计划的较高级别的中间阶段从其他阶段检索数据。
+ * 当 Trino 调度查询时，协调器会查询连接器以获取可用于表的所有split的列表。 协调器跟踪哪些机器正在运行哪些任务，以及哪些task正在处理哪些split。
+ */
 public final class Split
 {
     private final CatalogName catalogName;

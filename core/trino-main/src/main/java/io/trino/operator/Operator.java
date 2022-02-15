@@ -17,7 +17,10 @@ import com.google.common.util.concurrent.ListenableFuture;
 import io.trino.spi.Page;
 
 import static com.google.common.util.concurrent.Futures.immediateVoidFuture;
-
+/**
+ * 一个自定义的Operator对数据进行transforms 和 produces。
+ * 例如，表扫描从connector获取数据并produces可供其他operator使用的数据，过滤运算符使用数据并通过对输入数据应用谓词来生成子集。
+ */
 public interface Operator
         extends AutoCloseable
 {
