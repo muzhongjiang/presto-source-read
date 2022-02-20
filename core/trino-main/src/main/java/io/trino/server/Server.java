@@ -73,6 +73,9 @@ import static io.trino.server.TrinoSystemRequirements.verifySystemTimeIsReasonab
 import static java.lang.String.format;
 import static java.nio.file.LinkOption.NOFOLLOW_LINKS;
 
+/**
+ *
+ */
 public class Server
 {
     public final void start(String trinoVersion)

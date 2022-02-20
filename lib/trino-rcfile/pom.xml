@@ -65,6 +65,7 @@
             <artifactId>jol-core</artifactId>
         </dependency>
 
+        <!-- https://github.com/trinodb/trino-hadoop-apache -->
         <!-- for hadoop compression -->
         <dependency>
             <groupId>io.trino.hadoop</groupId>
@@ -85,6 +86,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://github.com/trinodb/trino-hive-apache -->
         <dependency>
             <groupId>io.trino.hive</groupId>
             <artifactId>hive-apache</artifactId>

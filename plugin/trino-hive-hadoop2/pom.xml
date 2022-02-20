@@ -38,6 +38,7 @@
             <artifactId>rubix-presto-shaded</artifactId>
         </dependency>
 
+        <!-- https://github.com/trinodb/trino-hadoop-apache -->
         <!-- used by tests but also needed transitively -->
         <dependency>
             <groupId>io.trino.hadoop</groupId>

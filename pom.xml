@@ -564,12 +564,14 @@
                 <version>3.2.0-16</version>
             </dependency>
 
+            <!-- https://github.com/trinodb/trino-hive-apache -->
             <dependency>
                 <groupId>io.trino.hive</groupId>
                 <artifactId>hive-apache</artifactId>
                 <version>3.1.2-17</version>
             </dependency>
 
+            <!-- https://github.com/trinodb/trino-hive-apache -->
             <dependency>
                 <groupId>io.trino.hive</groupId>
                 <artifactId>hive-apache-jdbc</artifactId>

@@ -12,7 +12,9 @@
  * limitations under the License.
  */
 package io.trino.spi.connector;
-
+/**
+ *
+ */
 public interface ConnectorSplitManager
 {
     @Deprecated

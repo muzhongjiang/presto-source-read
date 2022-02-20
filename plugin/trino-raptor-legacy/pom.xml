@@ -38,6 +38,7 @@
             <artifactId>hadoop-apache</artifactId>
         </dependency>
 
+        <!-- https://github.com/trinodb/trino-hive-apache -->
         <dependency>
             <groupId>io.trino.hive</groupId>
             <artifactId>hive-apache</artifactId>

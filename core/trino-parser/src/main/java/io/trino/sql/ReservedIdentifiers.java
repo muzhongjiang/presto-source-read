@@ -38,6 +38,7 @@ import static java.lang.String.format;
 /**
  *
  */
+
 public final class ReservedIdentifiers
 {
     private static final Pattern IDENTIFIER = Pattern.compile("'([A-Z_]+)'");

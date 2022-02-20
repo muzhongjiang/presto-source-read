@@ -32,6 +32,7 @@ import static com.google.common.base.MoreObjects.toStringHelper;
 import static io.trino.execution.TaskStatus.initialTaskStatus;
 import static io.trino.execution.buffer.BufferState.OPEN;
 import static java.util.Objects.requireNonNull;
+
 /**
  * stage对分布式查询计划的特定部分进行建模，但stage 本身并不在worker 上执行。
  * 要了解一个stage是如何执行的，您需要了解一个stage是作为分布在 worker上的一系列task实现的。

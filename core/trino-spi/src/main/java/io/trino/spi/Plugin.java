@@ -31,6 +31,9 @@ import java.util.Set;
 
 import static java.util.Collections.emptyList;
 import static java.util.Collections.emptySet;
+/**
+ * plugin spi
+ */
 
 public interface Plugin
 {

@@ -11,9 +11,10 @@
 
 ### Format Git commit messages
 
-When writing a Git commit message, follow these [guidelines](https://chris.beams.io/posts/git-commit/).
 
-### Git merge strategy
+编写 Git 提交消息时，请遵循这些 [guidelines](https://chris.beams.io/posts/git-commit/).
+
+### Git合并策略  
 
 Pull requests are usually merged into `master` using the  [`rebase and merge`](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges#rebase-and-merge-your-pull-request-commits) strategy.
 
@@ -37,26 +38,20 @@ much easier and reduces the chance of introducing unintended changes in behavior
 
 ## Code Style
 
-We recommend you use IntelliJ as your IDE. The code style template for the
-project can be found in the [codestyle](https://github.com/airlift/codestyle)
-repository along with our general programming and Java guidelines. 
+建议您使用 IntelliJ 作为您的 IDE。 
+项目代码样式模板可以在 [codestyle](https://github.com/airlift/codestyle) 。
+在开启 PR 之前运行 checkstyle 和其他 maven 检查： `./mvnw validate`
+除了这些，您还应该遵守以下规定：
 
-To run checkstyle and other maven checks before opening a PR: `./mvnw validate`
 
-In addition to those you should also adhere to the following:
+### 按字母顺序排列  
 
-### Alphabetize
+按字母顺序排列文档源文件中的部分（都在内容文件和其他常规文档文件）。 一般来说，按字母顺序排列方法/变量/部分，如果这样的排序已经存在于周围代码。
 
-Alphabetize sections in the documentation source files (both in the table of
-contents files and other regular documentation files).  In general, alphabetize
-methods/variables/sections if such ordering already exists in the surrounding
-code.
+### Use streams 
 
-### Use streams
-
-When appropriate, use the stream API. However, note that the stream
-implementation does not perform well so avoid using it in inner loops or
-otherwise performance sensitive sections.
+适当时，使用流 API。 
+但是，请注意流实现的性能不佳，因此请避免在内部循环或其他对性能敏感的部分中使用它。
 
 ### Categorize errors when throwing exceptions.
 

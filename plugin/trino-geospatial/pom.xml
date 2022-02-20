@@ -141,6 +141,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://github.com/trinodb/trino-hadoop-apache -->
         <dependency>
             <groupId>io.trino.hadoop</groupId>
             <artifactId>hadoop-apache</artifactId>

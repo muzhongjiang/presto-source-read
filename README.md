@@ -24,7 +24,7 @@ information about reporting vulnerabilities.
 2、执行build命令：
 ```shell
 export JAVA_HOME=/Users/muzhongjiang/software/jdk-11.0.12.jdk/Contents/Home
-./mvnw clean install -DskipTests  -X
+./mvnw clean install -DskipTests -X
 ```
 
 Trino 有一套全面的测试，这些测试需要相当长的时间才能运行，因此被上述命令禁用。 
@@ -70,6 +70,8 @@ IntelliJ, using `$MODULE_DIR$` accomplishes this automatically.
 
 
 ### 查询mysql  
+`io.trino.cli.Trino --server localhost:8080 --catalog mysql --schema test --output-format=JSON --debug`
+
 1、配置catalog：
 ```properties
 connector.name=mysql

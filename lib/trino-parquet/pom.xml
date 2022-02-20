@@ -27,6 +27,7 @@
             <artifactId>trino-plugin-toolkit</artifactId>
         </dependency>
 
+        <!-- https://github.com/trinodb/trino-hive-apache -->
         <dependency>
             <groupId>io.trino.hive</groupId>
             <artifactId>hive-apache</artifactId>
@@ -98,6 +99,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- https://github.com/trinodb/trino-hadoop-apache -->
         <dependency>
             <groupId>io.trino.hadoop</groupId>
             <artifactId>hadoop-apache</artifactId>

@@ -24,6 +24,7 @@ import java.util.concurrent.CompletableFuture;
  * Exchange在Trino节点之间为Query的不同stage传输数据。
  * task将数据生成到输出缓冲区并使用交换客户端使用来自其他任务的数据。
  */
+
 @ThreadSafe
 public interface Exchange
         extends Closeable
