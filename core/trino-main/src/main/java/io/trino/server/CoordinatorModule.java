@@ -132,6 +132,7 @@ import static java.util.concurrent.Executors.newSingleThreadScheduledExecutor;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.weakref.jmx.guice.ExportBinder.newExporter;
 
+/** Coordinator */
 public class CoordinatorModule
         extends AbstractConfigurationAwareModule
 {

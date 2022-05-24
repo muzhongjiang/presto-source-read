@@ -23,7 +23,9 @@ import io.trino.sql.tree.Expression;
 import javax.annotation.concurrent.Immutable;
 
 import java.util.List;
-
+/**
+ * 过滤
+ */
 @Immutable
 public class FilterNode
         extends PlanNode

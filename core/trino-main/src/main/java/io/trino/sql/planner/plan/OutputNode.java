@@ -25,7 +25,9 @@ import java.util.List;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static java.util.Objects.requireNonNull;
-
+/**
+ * 结果输出
+ */
 @Immutable
 public class OutputNode
         extends PlanNode

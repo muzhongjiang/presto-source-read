@@ -42,7 +42,9 @@ import static io.trino.cli.TerminalUtils.isRealTerminal;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
-
+/**
+ *
+ */
 public final class QueryPreprocessor
 {
     public static final String ENV_PREPROCESSOR = "TRINO_PREPROCESSOR";

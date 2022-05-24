@@ -41,7 +41,9 @@ import static com.google.common.base.Preconditions.checkState;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
-
+/**
+ * 数据读取
+ */
 @Immutable
 public class TableScanNode
         extends PlanNode

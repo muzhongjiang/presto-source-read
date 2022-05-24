@@ -41,7 +41,9 @@ import java.util.Set;
 import static com.google.common.base.Preconditions.checkArgument;
 import static io.trino.sql.planner.plan.AggregationNode.Step.SINGLE;
 import static java.util.Objects.requireNonNull;
-
+/**
+ * 聚合
+ */
 @Immutable
 public class AggregationNode
         extends PlanNode

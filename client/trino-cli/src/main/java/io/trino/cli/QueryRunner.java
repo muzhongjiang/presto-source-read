@@ -48,7 +48,9 @@ import static io.trino.client.OkHttpUtil.tokenAuth;
 import static io.trino.client.StatementClientFactory.newStatementClient;
 import static java.util.Objects.requireNonNull;
 import static java.util.concurrent.TimeUnit.SECONDS;
-
+/**
+ *
+ */
 public class QueryRunner
         implements Closeable
 {

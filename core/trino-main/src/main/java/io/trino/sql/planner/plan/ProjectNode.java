@@ -24,7 +24,9 @@ import javax.annotation.concurrent.Immutable;
 import java.util.List;
 
 import static java.util.Objects.requireNonNull;
-
+/**
+ * 字段映射
+ */
 @Immutable
 public class ProjectNode
         extends PlanNode

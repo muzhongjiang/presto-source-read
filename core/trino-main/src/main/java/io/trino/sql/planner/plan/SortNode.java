@@ -23,7 +23,9 @@ import io.trino.sql.planner.Symbol;
 import java.util.List;
 
 import static java.util.Objects.requireNonNull;
-
+/**
+ * 排序
+ */
 public class SortNode
         extends PlanNode
 {

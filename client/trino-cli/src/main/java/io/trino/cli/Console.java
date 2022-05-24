@@ -71,7 +71,9 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.jline.utils.AttributedStyle.CYAN;
 import static org.jline.utils.AttributedStyle.DEFAULT;
-
+/**
+ * 控制台命令
+ */
 @Command(
         name = "trino",
         header = "Trino command line interface",

@@ -17,7 +17,9 @@ import io.trino.cost.StatsAndCosts;
 import io.trino.sql.planner.plan.PlanNode;
 
 import static java.util.Objects.requireNonNull;
-
+/**
+ * 执行计划
+ */
 public class Plan
 {
     private final PlanNode root;

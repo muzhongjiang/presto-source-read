@@ -21,7 +21,9 @@ import java.util.Optional;
 
 import static com.google.common.base.MoreObjects.toStringHelper;
 import static java.util.Objects.requireNonNull;
-
+/**
+ * 语法分析
+ */
 public class Analyze
         extends Statement
 {
