@@ -46,7 +46,9 @@ import static io.trino.spi.StandardErrorCode.NOT_SUPPORTED;
 import static java.util.Collections.emptyList;
 import static java.util.Collections.emptyMap;
 import static java.util.stream.Collectors.toUnmodifiableList;
-
+/**
+ * Connector 组件 Metadata 接口 实现
+ */
 public interface ConnectorMetadata
 {
     /**

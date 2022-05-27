@@ -17,7 +17,9 @@ import io.trino.connector.CatalogName;
 
 import java.util.Set;
 import java.util.function.Consumer;
-
+/**
+ * 系统内部节点管理
+ */
 public interface InternalNodeManager
 {
     Set<InternalNode> getNodes(NodeState state);
@@ -26,10 +28,13 @@ public interface InternalNodeManager
 
     InternalNode getCurrentNode();
 
+    /**获取Coordinator节点*/
     Set<InternalNode> getCoordinators();
 
+    /**获取所有节点*/
     AllNodes getAllNodes();
 
+    /**刷新节点*/
     void refreshNodes();
 
     void addNodeChangeListener(Consumer<AllNodes> listener);

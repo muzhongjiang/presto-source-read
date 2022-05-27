@@ -282,6 +282,7 @@ public class QueryTracker<T extends TrackedQuery>
         return lastHeartbeat != null && lastHeartbeat.isBefore(oldestAllowedHeartbeat);
     }
 
+    /**跟踪查询任务对象*/
     public interface TrackedQuery
     {
         QueryId getQueryId();

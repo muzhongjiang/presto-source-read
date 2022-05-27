@@ -24,8 +24,8 @@ public final class Slug
 {
     public enum Context
     {
-        QUEUED_QUERY,
-        EXECUTING_QUERY,
+        QUEUED_QUERY,//排队待执行
+        EXECUTING_QUERY,//执行中
     }
 
     private static final SecureRandom RANDOM = new SecureRandom();

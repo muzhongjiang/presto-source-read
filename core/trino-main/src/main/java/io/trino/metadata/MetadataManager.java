@@ -164,7 +164,9 @@ import static java.util.Collections.nCopies;
 import static java.util.Collections.singletonList;
 import static java.util.Locale.ENGLISH;
 import static java.util.Objects.requireNonNull;
-
+/**
+ * Metadata接口的唯一实现类是MetadataManager，该类中对元数据操作的接口的实现使用了ConnectorMetadata接口。
+ */
 public final class MetadataManager
         implements Metadata
 {

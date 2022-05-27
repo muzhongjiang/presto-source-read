@@ -95,7 +95,11 @@ import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.TEXT_PLAIN_TYPE;
 import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
 import static javax.ws.rs.core.Response.Status.NOT_FOUND;
-
+/**
+ * statement服务接口
+ *
+ * 与sql相关的请求均由该服务接口处理，包括：接收提交的sql语句、获取执行结果、取消查询 等。
+ */
 @Path("/v1/statement")
 public class QueuedStatementResource
 {
@@ -367,6 +371,8 @@ public class QueuedStatementResource
             }
         }
 
+
+        //获得查询结果并封装成QueryResults返回
         public QueryResults getQueryResults(long token, UriInfo uriInfo)
         {
             long lastToken = this.lastToken.get();

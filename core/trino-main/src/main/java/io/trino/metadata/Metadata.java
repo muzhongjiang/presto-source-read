@@ -71,7 +71,10 @@ import java.util.OptionalLong;
 import java.util.Set;
 
 import static io.trino.spi.function.OperatorType.CAST;
-
+/**
+ * Metadata API即Metadata接口，提供了对元数据进行各种操作的接口，例如：列出所有库名（listSchemaNames）、表名（listTables）等。在对sql进行语义分析时会用到。
+ * Metadata接口的唯一实现类是MetadataManager，该类中对元数据操作的接口的实现使用了ConnectorMetadata接口。
+ */
 public interface Metadata
 {
     Set<ConnectorCapabilities> getConnectorCapabilities(Session session, CatalogName catalogName);

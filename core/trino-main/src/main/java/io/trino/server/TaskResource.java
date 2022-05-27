@@ -84,7 +84,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
- * Manages tasks on this worker node
+ * 管理 此worker节点 上的任务
  */
 @Path("/v1/task")
 public class TaskResource
@@ -129,6 +129,9 @@ public class TaskResource
         return allTaskInfo;
     }
 
+    /**
+     * 创建或者更新 task
+     */
     @ResourceSecurity(INTERNAL_ONLY)
     @POST
     @Path("{taskId}")
@@ -162,6 +165,9 @@ public class TaskResource
         asyncResponse.resume(Response.ok().entity(taskInfo).build());
     }
 
+    /**
+     * 获取 task 信息
+     */
     @ResourceSecurity(INTERNAL_ONLY)
     @GET
     @Path("{taskId}")
@@ -264,6 +270,9 @@ public class TaskResource
         asyncResponse.resume(taskManager.acknowledgeAndGetNewDynamicFilterDomains(taskId, currentDynamicFiltersVersion));
     }
 
+    /**
+     * 删除 task
+     */
     @ResourceSecurity(INTERNAL_ONLY)
     @DELETE
     @Path("{taskId}")

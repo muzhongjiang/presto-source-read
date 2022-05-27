@@ -319,6 +319,11 @@ class StatementClientV1
         return builder;
     }
 
+    /**
+     * client对查询结果的分批查询，最终都是通过反复调用StatementClient的advance方法实现的。
+     * 每次调用该方法都会向Coordinator发起nextResultUri的Rest请求。
+     * 数据写入：currentResults
+     */
     @Override
     public boolean advance()
     {

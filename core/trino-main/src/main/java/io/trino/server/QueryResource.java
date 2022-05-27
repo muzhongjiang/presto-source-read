@@ -51,7 +51,8 @@ import static io.trino.server.security.ResourceSecurity.AccessType.AUTHENTICATED
 import static java.util.Objects.requireNonNull;
 
 /**
- * Manage queries scheduled on this node
+ * 管理在此节点上计划的查询.
+ * 与查询执行相关的请求均由Query服务接口处理，包括：接收提交的sql语句、获取执行结果、取消查询 等
  */
 @Path("/v1/query")
 public class QueryResource
@@ -70,6 +71,9 @@ public class QueryResource
         this.alternateHeaderName = protocolConfig.getAlternateHeaderName();
     }
 
+    /**
+     * 查询任务列表
+     */
     @ResourceSecurity(AUTHENTICATED_USER)
     @GET
     public List<BasicQueryInfo> getAllQueryInfo(@QueryParam("state") String stateFilter, @Context HttpServletRequest servletRequest, @Context HttpHeaders httpHeaders)
@@ -88,6 +92,9 @@ public class QueryResource
         return builder.build();
     }
 
+    /**
+     * 查询任务
+     */
     @ResourceSecurity(AUTHENTICATED_USER)
     @GET
     @Path("{queryId}")
@@ -108,6 +115,9 @@ public class QueryResource
         }
     }
 
+    /**
+     * 删除任务
+     */
     @ResourceSecurity(AUTHENTICATED_USER)
     @DELETE
     @Path("{queryId}")
@@ -127,6 +137,9 @@ public class QueryResource
         }
     }
 
+    /**
+     * kill任务
+     */
     @ResourceSecurity(AUTHENTICATED_USER)
     @PUT
     @Path("{queryId}/killed")
@@ -135,6 +148,9 @@ public class QueryResource
         return failQuery(queryId, createKillQueryException(message), servletRequest, httpHeaders);
     }
 
+    /**
+     * 抢占
+     */
     @ResourceSecurity(AUTHENTICATED_USER)
     @PUT
     @Path("{queryId}/preempted")
@@ -152,6 +168,7 @@ public class QueryResource
 
             checkCanKillQueryOwnedBy(sessionContextFactory.extractAuthorizedIdentity(servletRequest, httpHeaders, alternateHeaderName), queryInfo.getSession().toIdentity(), accessControl);
 
+//            在杀死之前检查以提供正确的错误代码
             // check before killing to provide the proper error code (this is racy)
             if (queryInfo.getState().isDone()) {
                 return Response.status(Status.CONFLICT).build();
